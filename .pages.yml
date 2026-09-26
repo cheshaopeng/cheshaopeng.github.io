@@ -1,1 +1,44 @@
+media:
+  input: assets/images/moments
+  output: /assets/images/moments
 
+content:
+  - name: moments
+    label: Moments
+    type: file
+    path: data/moments.json
+    format: json
+    fields:
+      - name: title_en
+        label: Title (English)
+        type: string
+      - name: title_zh
+        label: 标题（中文）
+        type: string
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - value: students
+              label: Students
+            - value: conferences
+              label: Conferences
+            - value: together
+              label: Together
+            - value: daily
+              label: Daily
+      - name: date
+        label: Date
+        type: date
+      - name: location_en
+        label: Location (English)
+        type: string
+        required: false
+      - name: location_zh
+        label: 地点（中文）
+        type: string
+        required: false
+      - name: image
+        label: Photo
+        type: image
